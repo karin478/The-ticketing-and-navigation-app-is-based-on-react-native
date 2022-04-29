@@ -4,7 +4,7 @@ import { StyleSheet, View, Image, TouchableOpacity, Text, ScrollView   } from "r
 function BarnardCastle(props) {
   return (
     <View style={styles.container}>
-              <ScrollView>
+
       <View style={styles.imageStack}>
         <Image
           source={require("D:/my-app3/assets/images/BarnardCastleMarketplace.jpeg")}
@@ -28,7 +28,7 @@ function BarnardCastle(props) {
         <Text style={styles.loremIpsum3}></Text>
       </View>
       <Text style={styles.text}>Barnard Castle</Text>
-      </ScrollView>
+
     </View>
   );
 }
