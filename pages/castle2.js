@@ -4,7 +4,7 @@ import { StyleSheet, View, Image, TouchableOpacity, Text ,  ScrollView} from "re
 function AucklandCastle(props) {
   return (
     <View style={styles.container}>
-      <ScrollView>
+
       <View style={styles.imageStack}>
         <Image
           source={require("D:/my-app3/assets/images/Auckland_Castle_Crop.jpeg")}
@@ -29,7 +29,7 @@ function AucklandCastle(props) {
         <Text style={styles.price1}>Price</Text>
       </View>
       <Text style={styles.text}>Auckland Castle</Text>
-      </ScrollView>
+
     </View>
   );
 }
