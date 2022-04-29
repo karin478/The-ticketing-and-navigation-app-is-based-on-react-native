@@ -12,7 +12,7 @@ import {
 function AlnwickCstle(props) {
   return (
     <View style={styles.container}>
-        <ScrollView>
+
       <View style={styles.imageStack}>
         <Image
           source={require("D:/my-app3/assets/images/Alnwick_Castle_02.jpeg")}
@@ -37,7 +37,7 @@ function AlnwickCstle(props) {
         <Text style={styles.price1}>Price</Text>
       </View>
       <Text style={styles.bamburghCastle3}>Alnwick Castle</Text>
-      </ScrollView>
+
     </View>
   );
 }
