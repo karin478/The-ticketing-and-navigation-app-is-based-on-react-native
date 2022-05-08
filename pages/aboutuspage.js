@@ -1,10 +1,36 @@
 import React, { Component } from "react";
 import { StyleSheet, View, ScrollView, Text, Image } from "react-native";
 
+/*
+
+Page designer: Binghan Lyu
+
+Reviewed by: Binghan Lyu
+
+Review date: 2022/05/08
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+/*
+Ways to enumerate the responsibilities of all software producers on the job. 
+Added scrollview so that the text information in the entire page can be slid vertically
+*/
+
 function aboutus(props) {
   return (
     <View style={styles.container}>
+       <View style={styles.topslide}></View>
       <View style={styles.scrollArea}>
+        {/*Added scrollview so that the text information in 
+        the entire page can be slid vertically*/}
         <ScrollView
           horizontal={false}
           contentContainerStyle={styles.scrollArea_contentContainerStyle}
@@ -46,6 +72,7 @@ function aboutus(props) {
           </Text>
         </ScrollView>
       </View>
+      {/*picture inserted*/}
       <Image
         source={require("D:/my-app3/assets/images/Newcastle-University-logo.jpg")}
         resizeMode="contain"
@@ -55,6 +82,10 @@ function aboutus(props) {
   );
 }
 
+
+/*
+style file for this page
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -152,7 +183,18 @@ const styles = StyleSheet.create({
     height: 200,
     marginTop: -689,
     marginLeft: 74,
-  }
+  },
+  topslide:{
+    backgroundColor: "rgba(255,0,0,1)",
+    height:25,
+    width: '100%',
+    
+},
 });
+
+
+/*
+output default method
+*/
 
 export default aboutus;

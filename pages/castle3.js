@@ -1,3 +1,22 @@
+/*
+
+Page designer: Binghan Lyu
+
+Reviewed by: Caitlin Brown
+
+Review date: 2022/05/09
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+
 import React, { Component } from "react";
 import {
   StyleSheet,
@@ -8,11 +27,24 @@ import {
   TouchableOpacity, 
   ScrollView
 } from "react-native";
+import MapAmenities from './mapAmenities';
+
+/*
+Approach to Bamburgh Castle, with added pictures and text descriptions. Some of the text is stylized
+*/
+
 
 function BamburghCastle(props) {
   return (
     <View style={styles.container}>
+      <View style={styles.topslide}></View>
+    
+       
                     <ScrollView>
+                              <View>
+         <MapAmenities castle={'Bamburgh'} />
+    </View>
+                      {/*picture inserted*/}
       <View style={styles.imageStack}>
         <Image
           source={require("D:/my-app3/assets/images/Bamburgh_2006_closeup.jpeg")}
@@ -44,6 +76,11 @@ function BamburghCastle(props) {
   );
 }
 
+
+
+/*
+style file for this page
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -126,7 +163,17 @@ const styles = StyleSheet.create({
     marginTop: -264,
     marginLeft: 27,
     fontWeight: 'bold'
-  }
+  },
+  topslide:{
+    backgroundColor: "rgba(255,0,0,1)",
+    height:25,
+    width: '100%',
+    
+},
 });
 
+
+/*
+output default method
+*/
 export default BamburghCastle;

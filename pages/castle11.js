@@ -1,3 +1,24 @@
+/*
+
+Page designer: Binghan Lyu
+
+Reviewed by: Caitlin Brown
+
+Review date: 2022/05/10
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+
+
+
 import React, { Component } from "react";
 import {
   StyleSheet,
@@ -9,18 +30,25 @@ import {
   ScrollView  ,
   Button
 } from "react-native";
+import MapAmenities from './mapAmenities';
 
 
 
 
-
-
+/*
+Page method for Alnwick Castle, with added pictures and text. Some texts are treated with special style
+*/
 
 function AlnwickCstle(props) {
   return (
+    <ScrollView >
     <View style={styles.container}>
-       
+        <View style={styles.topslide}></View>
+        <View>
+         <MapAmenities castle={'Alnwick'} />
+    </View>
       <View style={styles.imageStack}>
+        {/*picture inserted*/}
         <Image
           source={require("D:/my-app3/assets/images/Alnwick_Castle_02.jpeg")}
           resizeMode="contain"
@@ -30,14 +58,14 @@ function AlnwickCstle(props) {
       <View style={styles.loremIpsum1StackStack}>
         <View style={styles.loremIpsum1Stack}>
           <Text style={styles.loremIpsum1}>
-          Alnwick Castle is a castle and country house {"\n"}in Alnwick in the
-          English county of Northumb-{"\n"}erland. It is the seat of The 12th
-          Duke of Nort{"\n"}humberland, built following the Norman conq{"\n"}
-          uest and renovated and remodelled a number {"\n"}of times.
-          </Text>
-          <Text style={styles.loremIpsum2}>
           Adult Ticket Entrance Fee: £19.50 {"\n"}Adult Day Northeast (Bus Fare
           / Arriva): £8.60
+          </Text>
+          <Text style={styles.loremIpsum2}>
+          Alnwick Castle is a castle and country house in Alnwick in the
+          English county of Northumb-erland.It is the seat of The 12th
+          Duke of Northumberland, built following the Norman conq
+          uest and renovated and remodelled a number of times.
           </Text>
           <Text style={styles.loremIpsum3}></Text>
         </View>
@@ -46,9 +74,15 @@ function AlnwickCstle(props) {
       <Text style={styles.bamburghCastle3}>Alnwick Castle</Text>
     
     </View>
+    </ScrollView >
   );
 }
 
+
+
+/*
+style file for this page
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -133,7 +167,18 @@ const styles = StyleSheet.create({
     marginTop: -264,
     marginLeft: 27,
     fontWeight: 'bold'
-  }
+  },
+  topslide:{
+    backgroundColor: "rgba(255,0,0,1)",
+    height:25,
+    width: '100%',
+    
+},
 });
 
+
+
+/*
+output default method
+*/
 export default AlnwickCstle;

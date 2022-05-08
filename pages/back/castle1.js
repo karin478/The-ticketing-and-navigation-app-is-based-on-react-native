@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     height: 165,
     textAlign: "left"
   },
+  
   price: {
     top: 121,
     left: 0,
@@ -99,6 +100,12 @@ const styles = StyleSheet.create({
     marginLeft: 33
 
   },
+  topslide:{
+    backgroundColor: "rgba(255,0,0,1)",
+    height:25,
+    width: '100%',
+    
+},
 });
 
 export default AlnwickCstle1;

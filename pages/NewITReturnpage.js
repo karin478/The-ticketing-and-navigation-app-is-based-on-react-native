@@ -1,3 +1,25 @@
+/*
+
+Page designer: Binghan Lyu
+
+Reviewed by: Caitlin Brown
+
+Review date: 2022/05/11
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+
+
+
+
 import React from 'react';
 import { StyleSheet, View, Text, FlatList, TouchableOpacity ,Button} from 'react-native';
 import { useState } from 'react';
@@ -6,9 +28,18 @@ import { Ionicons } from '@expo/vector-icons';
 import { Center } from 'native-base';
 
 
-export default function internaryReturn({ navigation }) {
 
-    const [journeys, setJourneys] = useState([
+
+/*
+The method of the internary page, by allowing the user to view the specific transfer information of this trip.
+*/
+export default function internaryReturn({ navigation }) {
+ 
+ 
+    /*List all the data in the itinerary, you can connect to the database from here. 
+      After receiving the data from the database, the parameters will be passed to the specific method for rendering the front-end page*/
+ 
+    const [journeys] = useState([
         { DepartTime: '09:17',
          arriveTime: '10:24',
          DepartLocation: 'Nupermarket', 
@@ -35,7 +66,9 @@ export default function internaryReturn({ navigation }) {
          key: '2' },
   
       ]);
-
+ /*Returns the specific rendering of the page, using different containers and 
+      flatlists to render the different transfer parts formed this time*/
+  
       return (
         <View style={styles.container}>
             <View style={styles.topslide}></View>
@@ -60,8 +93,11 @@ export default function internaryReturn({ navigation }) {
                 </View>
         
           )} />
+          
            <View style={styles.rect6}>
-        <TouchableOpacity style={styles.button}   onPress={() => navigation.navigate('HomeScreen')}>
+                              {/*The confirmation button confirms this formation after confirming the data, click the next page of the reaction stack */}
+
+        <TouchableOpacity style={styles.button}   onPress={() => navigation.navigate('Order Confirm')}>
           <Text style={styles.confirmtext}>Confirm</Text>
         </TouchableOpacity>
            </View>
@@ -70,6 +106,9 @@ export default function internaryReturn({ navigation }) {
       );
     }
 
+
+
+/*style file for this page*/
 const styles = StyleSheet.create ({
     container: {
         flex: 1,

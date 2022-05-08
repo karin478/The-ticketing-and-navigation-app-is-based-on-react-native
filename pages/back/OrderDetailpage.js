@@ -1,10 +1,10 @@
 /*
 
-Page designer: Caitlin Brown
+Page designer: Binghan Lyu
 
-Reviewed by: Binghan Lyu
+Reviewed by:
 
-Review date: 2022/05/09
+Review date:
 
 Modification history -
 
@@ -19,7 +19,6 @@ Date:
 
 
 
-
 import React from 'react';
 import { StyleSheet, View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
@@ -28,12 +27,11 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 
 
-
 /*
 
 */
-export default function Journeys({ navigation }) {
-   
+export default function JourneysReturn({ navigation }) {
+    
     const [journeys] = useState([
         { DepartTime: '08:38', arriveTime: '09:53', jourLength: '1hr 22mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '1' },
         { DepartTime: '09:38', arriveTime: '10:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '2' },
@@ -53,7 +51,7 @@ export default function Journeys({ navigation }) {
 
           <FlatList data={journeys} renderItem={({ item }) => (
              <TouchableOpacity           title="Go to ITpage"
-             onPress={() => navigation.navigate('internary')} 
+             onPress={() => navigation.navigate('internary return')} 
              >
                 <View style={styles.journeyBox}>
                     <Text style={styles.titleText}>{ item.DepartTime } - { item.arriveTime }</Text>
@@ -76,9 +74,9 @@ export default function Journeys({ navigation }) {
 
 
 
-/*
+    /*
 style file for this page
-*/   
+*/
 const styles = StyleSheet.create ({
     container: {
         flex: 1,

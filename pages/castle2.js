@@ -1,11 +1,47 @@
+/*
+
+Page designer: Binghan Lyu
+
+Reviewed by: Binghan Lyu
+
+Review date: 2022/05/08
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+
 import React, { Component } from "react";
 import { StyleSheet, View, Image, TouchableOpacity, Text ,  ScrollView} from "react-native";
+import MapAmenities from './mapAmenities';
+
+
+
+/*
+AucklandCastle Castle page method, showing pictures and text
+*/
+
+
+
+
 
 function AucklandCastle(props) {
   return (
     <View style={styles.container}>
-      <ScrollView>
+       <View style={styles.topslide}></View>
+       <ScrollView >
+       <View>
+         <MapAmenities castle={'Auckland'} />
+    </View>
+      
       <View style={styles.imageStack}>
+        {/*picture inserted*/}
         <Image
           source={require("D:/my-app3/assets/images/Auckland_Castle_Crop.jpeg")}
           resizeMode="contain"
@@ -29,31 +65,35 @@ function AucklandCastle(props) {
         <Text style={styles.price1}>Price</Text>
       </View>
       <Text style={styles.text}>Auckland Castle</Text>
+  
       </ScrollView>
+  
     </View>
   );
 }
 
+
+
+/*
+style file for this page
+*/
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    
   },
   image: {
     top: 20,
     left: 20,
     width: 360,
     height: 298,
-    position: "absolute"
+  
   },
-  imageStack: {
-    width: 360,
-    height: 318,
-    marginTop: 38
-  },
+
   loremIpsum1: {
     top: 160,
     left: 0,
-    position: "absolute",
+
 
     color: "#121212",
     height: 33,
@@ -110,7 +150,17 @@ const styles = StyleSheet.create({
     marginTop: -218,
     marginLeft: 26,
     fontWeight: 'bold'
-  }
+  },
+  topslide:{
+    backgroundColor: "rgba(255,0,0,1)",
+    height:25,
+    width: '100%',
+    
+},
 });
 
+
+/*
+output default method
+*/
 export default AucklandCastle;

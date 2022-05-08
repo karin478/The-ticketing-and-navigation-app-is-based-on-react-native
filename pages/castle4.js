@@ -1,10 +1,41 @@
+/*
+
+Page designer: Binghan Lyu
+
+Reviewed by: Caitlin Brown
+
+Review date: 2022/05/08
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+
+
 import React, { Component } from "react";
 import { StyleSheet, View, Image, TouchableOpacity, Text, ScrollView   } from "react-native";
+import MapAmenities from './mapAmenities';
 
+
+
+/*
+Barnard Castle's approach, with pictures and text. Some text is stylized
+*/
 function BarnardCastle(props) {
   return (
     <View style={styles.container}>
+       <View style={styles.topslide}></View>
               <ScrollView>
+              <View>
+         <MapAmenities castle={'Barnard'} />
+    </View>
+                {/*picture inserted*/}
       <View style={styles.imageStack}>
         <Image
           source={require("D:/my-app3/assets/images/BarnardCastleMarketplace.jpeg")}
@@ -33,6 +64,11 @@ function BarnardCastle(props) {
   );
 }
 
+
+
+/*
+style file for this page
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -101,7 +137,18 @@ const styles = StyleSheet.create({
     marginTop: -191,
     marginLeft: 33,
     fontWeight: 'bold'
-  }
+  },
+  topslide:{
+    backgroundColor: "rgba(255,0,0,1)",
+    height:25,
+    width: '100%',
+    
+},
 });
 
+
+
+/*
+output default method
+*/
 export default BarnardCastle;

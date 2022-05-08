@@ -1,13 +1,39 @@
+/*
+
+Page designer: Caitlin Brown
+
+Reviewed by: Binghan Lyu
+
+Review date: 2022/05/07
+
+Modification history -
+
+Description:
+
+Date:
+
+*/
+
+
+
+
+
+
 import React from 'react';
 import { StyleSheet, View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 
+
+
+
+/*
+
+*/
 export default function JourneysReturn({ navigation }) {
-    // Todo: information from JSON file??
-    // Does this need useState? Are we changing it? 
-    const [journeys, setJourneys] = useState([
+
+    const [journeys] = useState([
         { DepartTime: '08:38', arriveTime: '09:53', jourLength: '1hr 22mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '1' },
         { DepartTime: '09:38', arriveTime: '10:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '2' },
         { DepartTime: '10:38', arriveTime: '11:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '3' },
@@ -19,7 +45,7 @@ export default function JourneysReturn({ navigation }) {
         <View style={styles.container}>
                        <View style={styles.topslide}></View>
             <View style={styles.title}>
-                {/* Todo: get variables from Home page input */}
+               
                 <Text style={styles.titleText}> Haymarket - Alnwick </Text> 
                 <Text style={styles.text}> Today - Fri 10/04/2022 </Text>
             </View>
@@ -46,6 +72,13 @@ export default function JourneysReturn({ navigation }) {
       );
     }
 
+
+
+
+
+/*
+style file for this page
+*/
 const styles = StyleSheet.create ({
     container: {
         flex: 1,
@@ -56,7 +89,7 @@ const styles = StyleSheet.create ({
         marginTop: 5,
         marginLeft: 5,
     },
-    //place text/titleText in global stylesheet??
+   
     text: {
         fontSize: 14,
         color: '#333',
