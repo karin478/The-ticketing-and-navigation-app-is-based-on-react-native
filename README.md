@@ -4,5 +4,6 @@ Dependencies{
 2. react navigation native
 3. react navigation drawer
 4. react navigation stack
+5. react-native-modal-datetime-picker
 
 }
