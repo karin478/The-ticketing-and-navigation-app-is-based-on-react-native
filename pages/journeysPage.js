@@ -35,11 +35,11 @@ import { FontAwesome5 } from '@expo/vector-icons';
 export default function Journeys({ navigation }) {
    
     const [journeys] = useState([
-        { DepartTime: '08:38', arriveTime: '09:53', jourLength: '1hr 22mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '1' },
-        { DepartTime: '09:38', arriveTime: '10:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '2' },
-        { DepartTime: '10:38', arriveTime: '11:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '3' },
-        { DepartTime: '09:38', arriveTime: '10:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '4' },
-        { DepartTime: '10:38', arriveTime: '11:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', key: '5' },
+        { DepartTime: '08:38', arriveTime: '09:53', jourLength: '1hr 22mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', Price: '11.5 £' , key: '1' },
+        { DepartTime: '09:38', arriveTime: '10:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', Price: '11.5 £' , key: '2' },
+        { DepartTime: '10:38', arriveTime: '11:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', Price: '11.5 £' , key: '3' },
+        { DepartTime: '09:38', arriveTime: '10:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', Price: '11.5 £' , key: '4' },
+        { DepartTime: '10:38', arriveTime: '11:57', jourLength: '1hr 26mins', changes: '0', bus: 'X15', operator: 'Arriva', departs: ' Haymarket Bus Station', walkTime: '7 mins', walkDistance: '0.4 miles', Price: '11.5 £' , key: '5' },
       ]);
 
       return (
@@ -61,6 +61,7 @@ export default function Journeys({ navigation }) {
                     <Text style={styles.text}>Changes: { item.changes } {'\n'}</Text>
                     <View style={styles.line} ></View>
                     <Text style={styles.text}> Bus: { item.bus } { item.operator }{'\n'}{ item.departs } </Text>
+                    <Text style={styles.text}> { item.Price } </Text>
                     <View style={styles.walking}>
                     <FontAwesome5 style={styles.icon} name="walking" size={24} color="black"  />
                     <Text style={styles.text}> { item.walkTime } {'\n'} { item.walkDistance } </Text>
