@@ -1,15 +1,13 @@
-// Import the functions you need from the SDKs you need
 import firebase from 'firebase/compat/app';
 import { initializeApp } from "firebase/app";
 import { getFirestore} from  'firebase/firestore';
 import { getDatabase } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 
+//The new version of firebase does not directly import react native through import, but imports initialliz and then manually starts the connection
 function firbaseDatabase(){
 
+  //Here is the key for the firebase database connection of this project
 const firebaseConfig = {
   apiKey: "AIzaSyBYTOIrHA0iXUWKoq9to1gQvPhuFSKORQ4",
   authDomain: "team7-9fa42.firebaseapp.com",
@@ -25,7 +23,9 @@ const firebaseConfig = {
 
  const database = getDatabase(app);
 
+firebase.initializeApp(firebaseConfig);
 
+firebase.firestore();
 
 return getDatabase(app);
 }
