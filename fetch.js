@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
+//Note: This page should be completed by Ananda Samaddar who left the team
 
+
+
+
+import React, { Component } from 'react';
 import { StyleSheet, ScrollView, ActivityIndicator, View , Text} from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { getDatabase, ref, onValue, get, DataSnapshot} from "firebase/database";
