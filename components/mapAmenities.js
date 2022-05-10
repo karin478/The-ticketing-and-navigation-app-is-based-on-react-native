@@ -26,7 +26,7 @@ import { useState, useEffect } from 'react';
 
 //Function to display castle location with the location of amenities around the 
 // castle displayed, takes in the castle as a parameter 
-export default function MapAmenities({ castle }) {
+export default function MapAmenities1({ castle }) {
     
     // State to retrieve and set the location to show points of interest around the
     // castle, set to Alnwick as default

@@ -35,46 +35,41 @@ function aboutus(props) {
           horizontal={false}
           contentContainerStyle={styles.scrollArea_contentContainerStyle}
         >
-          <Text style={styles.anandaSamaddar}>Ananda Samaddar</Text>
-          <Text style={styles.loremIpsum}>
-            Responsible for the writing of the back-end program, {"\n"}which can
-            query data from the database and send it {"\n"}to the front-end in
-            the required format.
-          </Text>
+         
           <Text style={styles.binghanLyu}>Binghan Lyu</Text>
           <Text style={styles.loremIpsum5}>
             Responsible for the writing of front-end programs, {"\n"}
             establishing the program interface and obtaining {"\n"}data from the
-            back-end and displaying it to the {"\n"}front-end.
+            back-end and displaying it to the {"\n"}front-end. And help with backend development.
           </Text>
           <Text style={styles.boningYang}>Boning Yang</Text>
           <Text style={styles.loremIpsum6}>
             Responsible for the writing of front-end programs, {"\n"}
             establishing the program interface and obtaining {"\n"}data from the
-            back-end and displaying it to the {"\n"}front-end.
+            back-end and displaying it to the {"\n"}front-end. And help with backend development.
           </Text>
           <Text style={styles.caitlinBrown}>Caitlin Brown</Text>
           <Text style={styles.loremIpsum7}>
             Responsible for the writing of front-end programs, {"\n"}
             establishing the program interface and obtaining {"\n"}data from the
-            back-end and displaying it to the {"\n"}front-end.
+            back-end and displaying it to the {"\n"}front-end. And help with backend development.
           </Text>
           <Text style={styles.liuliCao}>Liuli Cao</Text>
           <Text style={styles.loremIpsum2}>
             Responsible for designing and adjusting the {"\n"}database structure, 
             using SQL statements to create tables {"\n"}and inserting corresponding 
             values, testing and producing {"\n"}visual tables, and writing SQL 
-            statements to query {"\n"}data that meets requirements.
+            statements to query {"\n"}data that meets requirements. And help with backend development.
           </Text>
           <Text style={styles.loganJones2}>Logan Jones</Text>
           <Text style={styles.loremIpsum1}>
-            Responsible for documentation, and database {"\n"}construction.
+            Responsible for documentation, and database {"\n"}construction. And help with backend development.
           </Text>
         </ScrollView>
       </View>
       {/*picture inserted*/}
       <Image
-        source={require("D:/my-app3/assets/images/Newcastle-University-logo.jpg")}
+        source={require("../assets/images/Newcastle-University-logo.jpg")}
         resizeMode="contain"
         style={styles.image}
       ></Image>
@@ -98,12 +93,7 @@ const styles = StyleSheet.create({
     height: 821,
  
   },
-  anandaSamaddar: {
-    fontWeight: 'bold',
-    color: "#121212",
-    marginTop: 31,
-    marginLeft: 16
-  },
+ 
   loremIpsum: {
 
     color: "#121212",

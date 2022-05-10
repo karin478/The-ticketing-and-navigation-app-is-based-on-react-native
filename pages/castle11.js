@@ -30,7 +30,7 @@ import {
   ScrollView  ,
   Button
 } from "react-native";
-import MapAmenities from './mapAmenities';
+import MapAmenities1 from '../components/mapAmenities';
 
 
 
@@ -41,16 +41,19 @@ Page method for Alnwick Castle, with added pictures and text. Some texts are tre
 
 function AlnwickCstle(props) {
   return (
-    <ScrollView >
+    
     <View style={styles.container}>
         <View style={styles.topslide}></View>
+        <View style={styles.scrollArea}>
+       <ScrollView         horizontal={false}
+          contentContainerStyle={styles.scrollArea_contentContainerStyle}>
         <View>
-         <MapAmenities castle={'Alnwick'} />
+         <MapAmenities1 castle={'Alnwick'} />
     </View>
       <View style={styles.imageStack}>
         {/*picture inserted*/}
         <Image
-          source={require("D:/my-app3/assets/images/Alnwick_Castle_02.jpeg")}
+          source={require("../assets/images/Alnwick_Castle_02.jpeg")}
           resizeMode="contain"
           style={styles.image}
         ></Image>
@@ -72,9 +75,10 @@ function AlnwickCstle(props) {
         <Text style={styles.price1}>Price</Text>
       </View>
       <Text style={styles.bamburghCastle3}>Alnwick Castle</Text>
+    </ScrollView >
+    </View>
     
     </View>
-    </ScrollView >
   );
 }
 
@@ -99,6 +103,13 @@ const styles = StyleSheet.create({
     width: 360,
     height: 318,
     marginTop: 38
+  }, scrollArea: {
+    height: 874,
+    
+  },
+  scrollArea_contentContainerStyle: {
+    height: 1021,
+ 
   },
   text: {
 

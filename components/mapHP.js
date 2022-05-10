@@ -22,7 +22,7 @@ import MapView from 'react-native-maps';
 import { StyleSheet, View } from 'react-native';
 
 // Function to display map of the North East on app homepage
-export default function MapHP() {
+export default function MapHP1() {
   const region = {      
 
     latitude: 54.97808288666505,

@@ -19,7 +19,8 @@ Date:
 
 import React, { Component } from "react";
 import { StyleSheet, View, Image, TouchableOpacity, Text ,  ScrollView} from "react-native";
-import MapAmenities from './mapAmenities';
+import MapAmenities1 from "../components/mapAmenities";
+
 
 
 
@@ -35,15 +36,18 @@ function AucklandCastle(props) {
   return (
     <View style={styles.container}>
        <View style={styles.topslide}></View>
-       <ScrollView >
+       
+       <View style={styles.scrollArea}>
+       <ScrollView         horizontal={false}
+          contentContainerStyle={styles.scrollArea_contentContainerStyle}>
        <View>
-         <MapAmenities castle={'Auckland'} />
+         <MapAmenities1 castle={'Auckland'} />
     </View>
       
       <View style={styles.imageStack}>
         {/*picture inserted*/}
         <Image
-          source={require("D:/my-app3/assets/images/Auckland_Castle_Crop.jpeg")}
+          source={require("../assets/images/Auckland_Castle_Crop.jpeg")}
           resizeMode="contain"
           style={styles.image}
         ></Image>
@@ -67,6 +71,7 @@ function AucklandCastle(props) {
       <Text style={styles.text}>Auckland Castle</Text>
   
       </ScrollView>
+    </View>
   
     </View>
   );
@@ -88,6 +93,13 @@ const styles = StyleSheet.create({
     width: 360,
     height: 298,
   
+  },   scrollArea: {
+    height: 874,
+    
+  },
+  scrollArea_contentContainerStyle: {
+    height: 1021,
+ 
   },
 
   loremIpsum1: {

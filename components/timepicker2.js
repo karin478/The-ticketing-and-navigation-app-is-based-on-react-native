@@ -29,7 +29,7 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 /*
 This method comes from the date time picker of an external library, and can use a component to create date time pickers on Android and iOS.*/
-const Datechose = () => {
+const Datechose1 = () => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
   /*Show date selection*/
@@ -50,8 +50,9 @@ const Datechose = () => {
     <View style={styles.chosedates}>
       <Button style={styles.Button} color='#696969' title="Set your Date and Time" onPress={showDatePicker} />
       <DateTimePickerModal
+      
         isVisible={isDatePickerVisible}
-        mode="datetime"
+        mode="time"
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
       />
@@ -80,4 +81,4 @@ const styles = StyleSheet.create({
 /*
 output default method
 */
-export default Datechose;
+export default Datechose1;

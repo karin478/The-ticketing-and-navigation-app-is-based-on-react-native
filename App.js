@@ -35,7 +35,6 @@ import HomeScreen from './pages/homepage';
 import JourneysReturn from './pages/journeysReturnPage';
 import { createStackNavigator } from '@react-navigation/stack';
 import OrderConfirm from './pages/Orderconfirm';
-import Datechose from './pages/timepicker2';
 
 
 
@@ -117,12 +116,6 @@ function MyStack() {
 
 
 
-
-
-
-
-
-
 /*
 This is the function of the output page, which embeds the drawer in the stack structure. Final output of all pages
 */
@@ -135,3 +128,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+
+

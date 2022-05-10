@@ -27,7 +27,7 @@ import {
   TouchableOpacity, 
   ScrollView
 } from "react-native";
-import MapAmenities from './mapAmenities';
+import MapAmenities1 from '../components/mapAmenities';
 
 /*
 Approach to Bamburgh Castle, with added pictures and text descriptions. Some of the text is stylized
@@ -40,14 +40,17 @@ function BamburghCastle(props) {
       <View style={styles.topslide}></View>
     
        
-                    <ScrollView>
-                              <View>
-         <MapAmenities castle={'Bamburgh'} />
+      <View style={styles.scrollArea}>
+       <ScrollView         horizontal={false}
+          contentContainerStyle={styles.scrollArea_contentContainerStyle}>
+       
+         <View>
+         <MapAmenities1 castle={'Bamburgh'} />
     </View>
                       {/*picture inserted*/}
       <View style={styles.imageStack}>
         <Image
-          source={require("D:/my-app3/assets/images/Bamburgh_2006_closeup.jpeg")}
+          source={require("../assets/images/Bamburgh_2006_closeup.jpeg")}
           resizeMode="contain"
           style={styles.image}
         ></Image>
@@ -72,6 +75,7 @@ function BamburghCastle(props) {
       </View>
       <Text style={styles.bamburghCastle3}>Bamburgh Castle</Text>
       </ScrollView>
+      </View>
     </View>
   );
 }
@@ -96,6 +100,13 @@ const styles = StyleSheet.create({
     width: 360,
     height: 318,
     marginTop: 38
+  },  scrollArea: {
+    height: 874,
+    
+  },
+  scrollArea_contentContainerStyle: {
+    height: 1021,
+ 
   },
   text: {
 

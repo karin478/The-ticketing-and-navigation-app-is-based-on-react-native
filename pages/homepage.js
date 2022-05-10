@@ -32,8 +32,8 @@ import {
 } from "react-native";
 import { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
-import Datechose from './timepicker2';
-import MapHP from './mapHP';
+import Datechose1 from '../components/timepicker2';
+import MapHP1 from '../components/mapHP';
 
 
 
@@ -206,7 +206,7 @@ export default function HomeScreen({ navigation }) {
         return (
           <NativeBaseProvider>
              <View style={styles.topslide}></View>
-             <MapHP></MapHP>
+             <MapHP1></MapHP1>
             <Center flex={1} px="3">
               
             <View style={styles.BusCastleCon}>
@@ -220,7 +220,7 @@ export default function HomeScreen({ navigation }) {
                 </View>  
                 
                    <View>
-                      <Datechose />
+                      <Datechose1 />
                 </View>
                 
                 <View style={styles.Middleslide}></View>
