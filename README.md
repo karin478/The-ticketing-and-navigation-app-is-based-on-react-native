@@ -5,5 +5,6 @@ Dependencies{
 3. react navigation drawer
 4. react navigation stack
 5. react-native-modal-datetime-picker
+6. react native firebase
 
 }
