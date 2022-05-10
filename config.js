@@ -1,3 +1,6 @@
+//Note: This page should be completed by Ananda Samaddar who left the team
+
+
 import firebase from 'firebase/compat/app';
 import { initializeApp } from "firebase/app";
 import { getFirestore} from  'firebase/firestore';
