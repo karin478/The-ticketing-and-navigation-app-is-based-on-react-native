@@ -35,6 +35,7 @@ import HomeScreen from './pages/homepage';
 import JourneysReturn from './pages/journeysReturnPage';
 import { createStackNavigator } from '@react-navigation/stack';
 import OrderConfirm from './pages/Orderconfirm';
+import Datechose from './pages/timepicker2';
 
 
 
@@ -46,7 +47,6 @@ This is a drawer component built through the navigation external library.
 Users can switch between different pages through the component's sidebar.
 */
 
-
 const Drawer = createDrawerNavigator();
 
 
@@ -56,19 +56,19 @@ function MyDrawer() {
   return (
     <Drawer.Navigator useLegacyImplementation>
           
-      <Drawer.Screen name="HomeScreen" component={HomeScreen}  options={{  headerStyle: {
+      <Drawer.Screen name="Castle Planner" component={HomeScreen}  options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }} />
-      <Drawer.Screen name="AlnwickCstle" component={AlnwickCstle} options={{  headerStyle: {
+      <Drawer.Screen name="Alnwick Castle" component={AlnwickCstle} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
-      <Drawer.Screen name="AucklandCastle" component={AucklandCastle} options={{  headerStyle: {
+      <Drawer.Screen name="Auckland Castle" component={AucklandCastle} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
-      <Drawer.Screen name="BamburghCastle" component={BamburghCastle} options={{  headerStyle: {
+      <Drawer.Screen name="Bamburgh Castle" component={BamburghCastle} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
-      <Drawer.Screen name="BarnardCastle" component={BarnardCastle} options={{  headerStyle: {
+      <Drawer.Screen name="Barnard Castle" component={BarnardCastle} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
       <Drawer.Screen name="About us" component={aboutus} options={{  headerStyle: {
@@ -93,16 +93,16 @@ function MyStack() {
             backgroundColor: '#f4511e',
           } }}/>
    
-      <Stack.Screen name="journeys" component={journeys} options={{  headerStyle: {
+      <Stack.Screen name="Journeys" component={journeys} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
-      <Stack.Screen name="internary" component={internary} options={{  headerStyle: {
+      <Stack.Screen name="Itinerary" component={internary} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
-      <Stack.Screen name="journeys return" component={JourneysReturn} options={{  headerStyle: {
+      <Stack.Screen name="Return Journeys" component={JourneysReturn} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
-      <Stack.Screen name="internary return" component={internaryReturn} options={{  headerStyle: {
+      <Stack.Screen name="Return Itinerary" component={internaryReturn} options={{  headerStyle: {
             backgroundColor: '#d3d3d3',
           } }}/>
       <Stack.Screen name="Order Confirm" component={OrderConfirm} options={{  headerStyle: {
@@ -112,6 +112,12 @@ function MyStack() {
     </Stack.Navigator>
   );
 }
+
+
+
+
+
+
 
 
 
@@ -128,6 +134,4 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-
 
